@@ -1,0 +1,2 @@
+language: nix
+script: nix-build --expr "with import <nixpkgs> {}; pkgs.callPackage ./default.nix {}"
