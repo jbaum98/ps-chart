@@ -13,4 +13,3 @@ stdenv.mkDerivation {
     cp *.ttf $out/share/fonts/
   '';
 }
-

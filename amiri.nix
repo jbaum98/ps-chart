@@ -1,5 +1,4 @@
-{ stdenv, fetchurl, writeScript }:
-
+{ stdenv, fetchurl }:
 let
   regular = fetchurl {
     url = "https://github.com/google/fonts/raw/d1cf288b5c6a7719d9eb405bd0f47298b01367a6/ofl/amiri/Amiri-Regular.ttf";
@@ -20,16 +19,12 @@ let
     url = "https://github.com/google/fonts/raw/d1cf288b5c6a7719d9eb405bd0f47298b01367a6/ofl/amiri/Amiri-BoldItalic.ttf";
     sha256 = "1s3jfgnnlxb397xp2xi2lwvqnp7b2940xia5lx1gkvjmrakwl88g";
   };
-
-in
-stdenv.mkDerivation rec {
+in stdenv.mkDerivation rec {
   name = "arimoFont";
 
   phases = [ "installPhase" ];
 
   installPhase = ''
-    pwd
-    echo $out
     mkdir -p $out/share/fonts/
     cp ${regular} $out/share/fonts/Arimo-Regular.ttf
     cp ${italic} $out/share/fonts/Arimo-Italic.ttf
