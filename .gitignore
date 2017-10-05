@@ -1,2 +1,8 @@
 *.pdf
 /result
+auto
+*.aux
+*.fdb_latexmk
+*.fls
+*.log
+.#*
