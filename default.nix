@@ -14,8 +14,9 @@ let
   sbl = callPackage ./sbl.nix {};
   amiri = callPackage ./amiri.nix {};
   charis = callPackage ./charis.nix {};
+  damase = callPackage ./damase.nix {};
 
-  fonts = [ sbl amiri charis ];
+  fonts = [ sbl amiri charis damase ];
 
 in stdenv.mkDerivation {
   name = "proto-semitic-table";
