@@ -1,4 +1,4 @@
-{ stdenv, callPackage, fetchurl, fetchzip, makeFontsConf, texlive, unzip, lmodern }:
+{ lib, stdenv, callPackage, makeFontsConf, texlive }:
 let
   tex = texlive.combine {
   inherit (texlive)
@@ -19,14 +19,15 @@ let
 
 in stdenv.mkDerivation {
   name = "proto-semitic-table";
-  src = ./.;
 
   buildInputs = [
     tex
   ];
 
+  phases = [ "buildPhase" "installPhase" ];
+
   buildPhase = ''
-    latexmk --xelatex table.tex
+    latexmk --xelatex ${./table.tex} -jobname=table
   '';
 
   installPhase = ''
