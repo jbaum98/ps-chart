@@ -11,11 +11,11 @@ let
     booktabs;
   };
 
-  arimo = callPackage ./arimo.nix {};
+  sbl = callPackage ./sbl.nix {};
   amiri = callPackage ./amiri.nix {};
   charis = callPackage ./charis.nix {};
 
-  fonts = [ arimo amiri charis ];
+  fonts = [ sbl amiri charis ];
 
 in stdenv.mkDerivation {
   name = "proto-semitic-table";
