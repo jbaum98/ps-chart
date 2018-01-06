@@ -3,7 +3,7 @@ let
   tex = texlive.combine {
   inherit (texlive)
     # The Basics
-    scheme-basic xetex xetex-def euenc latexmk
+    scheme-basic xetex euenc latexmk
     standalone
     # Polyglossia
     polyglossia bidi hyphen-arabic
