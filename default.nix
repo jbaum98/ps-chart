@@ -6,9 +6,11 @@ let
     scheme-basic xetex xetex-def euenc latexmk
     standalone
     # Polyglossia
-    polyglossia bidi
+    polyglossia bidi hyphen-arabic
     # Nice tables
-    booktabs;
+    booktabs multirow
+    # Debugging
+    eso-pic;
   };
 
   sbl = callPackage ./sbl.nix {};

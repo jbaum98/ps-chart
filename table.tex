@@ -1,7 +1,10 @@
-\documentclass[border=0.25in]{standalone}
+\documentclass{article}
 
+\usepackage[letterpaper, margin=1in]{geometry}
 \usepackage{polyglossia}
 \usepackage{booktabs}
+\usepackage{multirow}
+% \usepackage{showframe} % TODO remove
 
 \setdefaultlanguage{english}
 \setotherlanguages{hebrew, arabic}
@@ -13,41 +16,71 @@
 \newcommand{\ra}[1]{\renewcommand{\arraystretch}{#1}}
 \ra{1.3}
 
-\begin{document}
 \title{Proto-Semitic Phonemes}
-\begin{tabular}{@{}lrr@{}}
+
+\begin{document}
+
+\begin{tabular}{@{}lllll@{}}
   \toprule
-  PS              & \texthebrew{עברית} & \textarabic{العربيه} \\
+  & PS                  & PWS                 & \texthebrew{עברית} & \textarabic{العربيه} \\
   \midrule
-  \**\textit{ʾ} [ʔ]   & \texthebrew{א} [ʔ] & \textarabic{ا} [ʔ] \\
-  \**\textit{ʿ} [ʕ]   & \texthebrew{ע} [ʕ] & \textarabic{ع} [ʕ] \\
-  \**\textit{b} [b]   & \texthebrew{ב} [b] & \textarabic{ب} [b] \\
-  \**\textit{d} [d]   & \texthebrew{ד} [d] & \textarabic{د} [b] \\
-  \**\textit{ḏ} [ð]   & \texthebrew{ז} [z] & \textarabic{ذ} [ð] \\
-  \**\textit{g} [g]   & \texthebrew{ג} [g] & \textarabic{ج} [b] \\
-  \**\textit{ġ} [ɣ]   & \texthebrew{ע} [ʕ] & \textarabic{غ} [\'{g}] \\
-  \**\textit{h} [h]   & \texthebrew{ה} [h] & \textarabic{ه} [h] \\ 
-  \**\textit{ḥ} [ħ]   & \texthebrew{ח} [ħ] & \textarabic{ح} [ħ] \\
-  \**\textit{k} [k]   & \texthebrew{כ} [k] & \textarabic{ك} kh] \\
-  \**\textit{ḳ} [k']  & \texthebrew{ק} [ḳ] & \textarabic{ق} [q]\\
-  \**\textit{l} [l]   & \texthebrew{ל} [l] & \textarabic{ل} [l]\\
-  \**\textit{ś} [ɬ]   & \texthebrew{שׂ} [ś] & \textarabic{ش} [š]\\
-  \**\textit{ṣ́} [ɬ']  & \texthebrew{צ} [ṣ] & \textarabic{ض} [ḍ]\\
-  \**\textit{m} [m]   & \texthebrew{מ} [m] & \textarabic{م} [m]\\
-  \**\textit{n} [n]   & \texthebrew{נ} [n] & \textarabic{ن} [n]\\
-  \**\textit{p} [p]   & \texthebrew{פ} [p] & \textarabic{ف} [f]\\
-  \**\textit{r} [r]   & \texthebrew{ר} [r] & \textarabic{ر} [r]\\
-  \**\textit{š} [ʃ]   & \texthebrew{שׁ} [š] & \textarabic{س} [s]\\
-  \**\textit{s} [ᵗs]  & \texthebrew{ס} [s] & \textarabic{س} [s]\\
-  \**\textit{ṣ} [ᵗs'] & \texthebrew{צ} [ṣ] & \textarabic{ص} [ṣ]\\
-  \**\textit{t} [t]   & \texthebrew{ת} [t] & \textarabic{ت} [t]\\
-  \**\textit{ṭ} [t']  & \texthebrew{ט} [ṭ] & \textarabic{ط} [ṭ]\\
-  \**\textit{ṯ} [θ]   & \texthebrew{שׁ} [š] & \textarabic{ث} [θ]\\
-  \**\textit{ṱ} [θ']  & \texthebrew{צ} [ṣ] & \textarabic{ظ} [ẓ]\\
-  \**\textit{w} [w]   & \texthebrew{ו} [v] & \textarabic{و} [w]\\
-  \**\textit{ḫ} [x]   & \texthebrew{ח} [ħ] & \textarabic{خ} [ḫ]\\
-  \**\textit{y} [j]   & \texthebrew{י} [y] & \textarabic{ي} [y]\\
-  \**\textit{z} [d͡z]  & \texthebrew{ז} [z] & \textarabic{ز} [z]\\
+  \multirow{3}{*}{bilabial stops}
+  & \**\textit{p} [p]   & \**\textit{p} [p]   & \texthebrew{פ} [p] & \textarabic{ف} [f]\\
+  \\
+  & \**\textit{b} [b]   & \**\textit{b} [b]   & \texthebrew{ב} [b] & \textarabic{ب} [b] \\
+  \midrule
+  \multirow{3}{*}{interdental fricatives}
+  & \**\textit{θ} [θ]   & \**\textit{θ} [θ]   & \texthebrew{שׁ} [š] & \textarabic{ث} [θ]\\
+  & \**\textit{θ̣} [θ']  & \**\textit{θ̣} [θ']  & \texthebrew{צ} [ṣ] & \textarabic{ظ} [ẓ]\\
+  & \**\textit{ð} [ð]   & \**\textit{ð} [ð]   & \texthebrew{ז} [z] & \textarabic{ذ} [ð] \\
+  \midrule
+  \multirow{3}{*}{dental stops}
+  & \**\textit{t} [t]   & \**\textit{t} [t]   & \texthebrew{ת} [t] & \textarabic{ت} [t]\\
+  & \**\textit{ṭ} [t']  & \**\textit{ṭ} [t']  & \texthebrew{ט} [ṭ] & \textarabic{ط} [ṭ]\\
+  & \**\textit{d} [d]   & \**\textit{d} [d]   & \texthebrew{ד} [d] & \textarabic{د} [d] \\
+  \midrule
+  \multirow{3}{*}{alveolar affricates}
+  & \**\textit{s} [ᵗs]  & \**\textit{s} [s]  & \texthebrew{ס} [s] & \textarabic{س} [s]\\
+  & \**\textit{ṣ} [ᵗs'] & \**\textit{ṣ} [s'] & \texthebrew{צ} [ṣ] & \textarabic{ص} [ṣ]\\
+  & \**\textit{z} [ᵈz]  & \**\textit{z} [z]  & \texthebrew{ז} [z] & \textarabic{ز} [z]\\
+  \midrule
+  \multirow{3}{*}{dental lateral continuants}
+  & \**\textit{ś} [ɬ]   & \**\textit{ś} [ɬ]   & \texthebrew{שׂ} [ś] & \textarabic{ش} [š]\\
+  & \**\textit{ṣ́} [ɬ']  & \**\textit{ṣ́} [ɬ']  & \texthebrew{צ} [ṣ] & \textarabic{ض} [ḍ]\\
+  & \**\textit{l} [l]   & \**\textit{l} [l]   & \texthebrew{ל} [l] & \textarabic{ل} [l]\\
+  \midrule
+  dental fricative
+  & \**\textit{š} [s]   & \**\textit{š} [s]   & \texthebrew{שׁ} [š] & \textarabic{س} [s]\\
+  \midrule
+  dental trill
+  & \**\textit{r} [r]   & \**\textit{r} [r]   & \texthebrew{ר} [r] & \textarabic{ر} [r]\\
+  \midrule
+  \multirow{3}{*}{velar stops}
+  & \**\textit{k} [k]   & \**\textit{k} [k]   & \texthebrew{כ} [k] & \textarabic{ك} [kh] \\
+  & \**\textit{ḳ} [k']  & \**\textit{ḳ} [k']  & \texthebrew{ק} [ḳ] & \textarabic{ق} [q]\\
+  & \**\textit{g} [g]   & \**\textit{g} [g]   & \texthebrew{ג} [g] & \textarabic{ج} [g] \\
+  \midrule
+  \multirow{3}{*}{velar fricatives}
+  & \**\textit{ḫ} [x]   & \**\textit{ḫ} [x]   & \texthebrew{ח} [ħ] & \textarabic{خ} [ḫ]\\
+  \\
+  & \**\textit{ġ} [ɣ]   & \**\textit{ġ} [ɣ]   & \texthebrew{ע} [ʕ] & \textarabic{غ} [\'{g}] \\
+  \midrule
+  \multirow{3}{*}{pharyngeals}
+  & \**\textit{ḥ} [ħ]   & \**\textit{ḥ} [ħ]   & \texthebrew{ח} [ħ] & \textarabic{ح} [ħ] \\
+  \\
+  & \**\textit{ʿ} [ʕ]   & \**\textit{ʿ} [ʕ]   & \texthebrew{ע} [ʕ] & \textarabic{ع} [ʕ] \\
+  \midrule
+  \multirow{2}{*}{glides}
+  & \**\textit{w} [w]   & \**\textit{w} [w]   & \texthebrew{ו} [v] & \textarabic{و} [w]\\
+  & \**\textit{y} [j]   & \**\textit{y} [j]   & \texthebrew{י} [j] & \textarabic{ي} [j]\\
+  \midrule
+  \multirow{2}{*}{glottals}
+  & \**\textit{ʾ} [ʔ]   & \**\textit{ʾ} [ʔ]   & \texthebrew{א} [ʔ] & \textarabic{ا} [ʔ] \\
+  & \**\textit{h} [h]   & \**\textit{h} [h]   & \texthebrew{ה} [h] & \textarabic{ه} [h] \\
+  \midrule
+  \multirow{2}{*}{nasals}
+  & \**\textit{m} [m]   & \**\textit{m} [m]   & \texthebrew{מ} [m] & \textarabic{م} [m]\\
+  & \**\textit{n} [n]   & \**\textit{n} [n]   & \texthebrew{נ} [n] & \textarabic{ن} [n]\\
   \bottomrule
 \end{tabular}
 \end{document}
